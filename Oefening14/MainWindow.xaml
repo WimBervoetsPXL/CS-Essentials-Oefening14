@@ -6,17 +6,30 @@
         xmlns:local="clr-namespace:Oefening14"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
-    <Grid>
+    <Canvas>
         <Label x:Name="LblTijd" Content="Hier komt de datum + tijd" HorizontalAlignment="Left" Margin="422,30,0,0" VerticalAlignment="Top" Width="351"/>
         <Button x:Name="BtnBereken" Content="Bereken" HorizontalAlignment="Left" Margin="422,99,0,0" VerticalAlignment="Top" Width="208" Height="28" Click="BtnBereken_Click"/>
         <TextBox x:Name="TxtGeboorte" HorizontalAlignment="Left" Margin="239,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" FontSize="14"/>
         <Label Content="Geboortedatum: " HorizontalAlignment="Left" Margin="93,100,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.099,-0.005" Width="120"/>
-        <TextBox x:Name="TxtJaren" HorizontalAlignment="Left" Margin="239,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
-        <TextBox x:Name="TxtMaanden" HorizontalAlignment="Left" Margin="239,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
-        <TextBox x:Name="TxtDagen" HorizontalAlignment="Left" Margin="239,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
-        <Label Content="Jaren" HorizontalAlignment="Left" Margin="125,184,0,0" VerticalAlignment="Top"/>
-        <Label Content="Maanden" HorizontalAlignment="Left" Margin="125,229,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.525,-0.084"/>
-        <Label Content="Dagen" HorizontalAlignment="Left" Margin="125,276,0,0" VerticalAlignment="Top"/>
+        <GroupBox Header=" Aantal jaren, maanden, dagen" Height="168" Canvas.Left="93" Canvas.Top="175" Width="293" BorderBrush="#FF56585A" BorderThickness="2,2,2,2">
+            <Grid Margin="10,10,10,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Jaren" Grid.Column="0" Width="auto" VerticalAlignment="Center"/>
+                <TextBox x:Name="TxtJaren" Grid.Row="0" Grid.Column="1" TextWrapping="Wrap"  FontSize="14" VerticalAlignment="Center" />
+                <Label Content="Maanden" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" />
+                <TextBox x:Name="TxtMaanden" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" FontSize="14" VerticalAlignment="Center" />
+                <Label Content="Dagen" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" />
+                <TextBox x:Name="TxtDagen" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" FontSize="14" VerticalAlignment="Center" />
+            </Grid>
+        </GroupBox>
 
-    </Grid>
+    </Canvas>
 </Window>
