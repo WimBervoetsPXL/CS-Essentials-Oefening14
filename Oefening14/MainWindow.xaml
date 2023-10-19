@@ -1,0 +1,22 @@
+﻿<Window x:Class="Oefening14.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Oefening14"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Label x:Name="LblTijd" Content="Hier komt de datum + tijd" HorizontalAlignment="Left" Margin="422,30,0,0" VerticalAlignment="Top" Width="351"/>
+        <Button x:Name="BtnBereken" Content="Bereken" HorizontalAlignment="Left" Margin="422,99,0,0" VerticalAlignment="Top" Width="208" Height="28" Click="BtnBereken_Click"/>
+        <TextBox x:Name="TxtGeboorte" HorizontalAlignment="Left" Margin="239,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" FontSize="14"/>
+        <Label Content="Geboortedatum: " HorizontalAlignment="Left" Margin="93,100,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.099,-0.005" Width="120"/>
+        <TextBox x:Name="TxtJaren" HorizontalAlignment="Left" Margin="239,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
+        <TextBox x:Name="TxtMaanden" HorizontalAlignment="Left" Margin="239,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
+        <TextBox x:Name="TxtDagen" HorizontalAlignment="Left" Margin="239,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
+        <Label Content="Jaren" HorizontalAlignment="Left" Margin="125,184,0,0" VerticalAlignment="Top"/>
+        <Label Content="Maanden" HorizontalAlignment="Left" Margin="125,229,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.525,-0.084"/>
+        <Label Content="Dagen" HorizontalAlignment="Left" Margin="125,276,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
